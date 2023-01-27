@@ -29,23 +29,23 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &clap) {
 }
 
 void ClapTrap::attack(const std::string& target) {
-	if (EP--)
-		std::cout << "Claptrap " << name << "Attacks" << target
-				  << ", causing " << DMG << "points of damage!";
+	if (--EP > 0)
+		std::cout << "Claptrap " << name << " Attacks " << target
+				  << ", causing " << DMG << " points of damage!" << std::endl;
 	else
-		std::cout << "ClapTrap " << name << "out of energy." << std::endl;
+		std::cout << "ClapTrap " << name << " out of energy." << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-	std::cout << "ClapTrap " << name << "took" << amount << "damage" << std::endl;
+	std::cout << "ClapTrap " << name << " took " << amount << " damage" << std::endl;
 	HP -= amount;
 }
 
 void ClapTrap::beRepaired(unsigned int value) {
 	if (EP--) {
-		std::cout << "ClapTrap " << name << "repaired by " << value << std::endl;
+		std::cout << "ClapTrap " << name << " repaired by " << value << std::endl;
 		HP += value;
 	}
 	else
-		std::cout << "ClapTrap " << name << "too tired to repair" << std::endl;
+		std::cout << "ClapTrap " << name << " too tired to repair" << std::endl;
 }
