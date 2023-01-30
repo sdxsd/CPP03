@@ -8,6 +8,14 @@ ClapTrap::ClapTrap(std::string title) {
 	DMG = 0;
 }
 
+ClapTrap::ClapTrap(int hp, int ep, int dmg, std::string title) {
+	std::cout << "ClapTrap(hp, ep, dmg, title) constructor called." << std::endl;
+	HP = hp;
+	EP = ep;
+	DMG = dmg;
+	name = title;
+}
+
 ClapTrap::ClapTrap(const ClapTrap& clap) {
 	std::cout << "ClapTrap copy constructor called." << std::endl;
 	name = clap.name;
@@ -17,7 +25,7 @@ ClapTrap::ClapTrap(const ClapTrap& clap) {
 }
 
 ClapTrap::~ClapTrap(void) {
-	std::cout << "ClapTrap deconstructor called." << std::endl;
+	std::cout << "ClapTrap destructor called." << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &clap) {

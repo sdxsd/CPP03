@@ -18,6 +18,7 @@ ScavTrap::~ScavTrap(void) {
 
 // DEEP copy.
 ScavTrap& ScavTrap::operator=(const ScavTrap& toCopy) {
+	std::cout << "Scavtrap operator= called." << std::endl;
 	this->HP = toCopy.HP;
 	this->EP = toCopy.EP;
 	this->DMG = toCopy.DMG;
