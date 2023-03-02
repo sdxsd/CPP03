@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void): ClapTrap(100, 50, 20, "Zoep") {
+ScavTrap::ScavTrap(void): ClapTrap(100, 50, 20, "defaultName") {
 	std::cout << "ScavTrap(void) constructor called." << std::endl;
 }
 
@@ -24,6 +24,16 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& toCopy) {
 	this->DMG = toCopy.DMG;
 	this->name = toCopy.name;
 	return (*this);
+}
+
+void ScavTrap::attack(const std::string& target) {
+	if (EP > 0 && HP > 0) {
+		std::cout << "ScavTrap" << name << " Attacks " << target
+				  << ", causing " << DMG << " points of damage!" << std::endl;
+		EP--;
+	}
+	else
+		std::cout << "ScavTrap " << name << " out of energy." << std::endl;
 }
 
 void ScavTrap::guardGate(void) {

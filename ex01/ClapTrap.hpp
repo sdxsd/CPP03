@@ -6,9 +6,9 @@
 class ClapTrap {
 	protected: // Protected allows subclasses to access member variables.
 		std::string name;
-		int	HP;
-		int	EP;
-		int	DMG;
+		long	HP;
+		long	EP;
+		long	DMG;
 	public:
 		ClapTrap(std::string title);
 		ClapTrap(int hp, int ep, int dmg, std::string title);
