@@ -28,7 +28,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& toCopy) {
 
 void ScavTrap::attack(const std::string& target) {
 	if (EP > 0 && HP > 0) {
-		std::cout << "ScavTrap" << name << " Attacks " << target
+		std::cout << "ScavTrap: " << name << " Attacks " << target
 				  << ", causing " << DMG << " points of damage!" << std::endl;
 		EP--;
 	}
