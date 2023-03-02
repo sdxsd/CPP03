@@ -26,6 +26,16 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& toCopy) {
 	return (*this);
 }
 
+void ScavTrap::attack(const std::string& target) {
+	if (EP > 0 && HP > 0) {
+		std::cout << "ScavTrap" << name << " Attacks " << target
+				  << ", causing " << DMG << " points of damage!" << std::endl;
+		EP--;
+	}
+	else
+		std::cout << "ScavTrap " << name << " out of energy." << std::endl;
+}
+
 void ScavTrap::guardGate(void) {
 	static bool gateStatus;
 

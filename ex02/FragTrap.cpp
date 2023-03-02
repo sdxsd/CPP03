@@ -26,6 +26,16 @@ FragTrap& FragTrap::operator=(const FragTrap& toCopy) {
 	return (*this);
 }
 
+void FragTrap::attack(const std::string& target) {
+	if (EP > 0 && HP > 0) {
+		std::cout << "FragTrap" << name << " Attacks " << target
+				  << ", causing " << DMG << " points of damage!" << std::endl;
+		EP--;
+	}
+	else
+		std::cout << "FragTrap " << name << " out of energy." << std::endl;
+}
+
 void FragTrap::highFivesGuys(void) {
 	std::cout << "Let's have a high five guys!" << std::endl;
 }
