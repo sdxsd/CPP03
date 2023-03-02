@@ -18,7 +18,7 @@ FragTrap::~FragTrap(void) {
 
 // DEEP copy.
 FragTrap& FragTrap::operator=(const FragTrap& toCopy) {
-	std::cout << "Scavtrap operator= called." << std::endl;
+	std::cout << "Fragtrap operator= called." << std::endl;
 	this->HP = toCopy.HP;
 	this->EP = toCopy.EP;
 	this->DMG = toCopy.DMG;
